@@ -16,7 +16,13 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Connected to MongoDB Atlas"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
-// Routes
+// Import routes
+const plantRoutes = require("./routes/plantRoutes");
+
+// Use routes
+app.use("/plants", plantRoutes);
+
+// Root route
 app.get("/", (req, res) => {
   res.send("🌱 Greenopedia backend is running with MongoDB!");
 });

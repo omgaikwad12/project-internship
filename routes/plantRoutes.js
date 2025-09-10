@@ -1,5 +1,5 @@
 const express = require("express");
-const Plant = require("../models/plant");
+const Plant = require("../models/Plant");
 const router = express.Router();
 
 // Get all plants
@@ -24,3 +24,4 @@ router.post("/", async (req, res) => {
 });
 
 module.exports = router;
+

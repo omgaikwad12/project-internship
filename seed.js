@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Plant = require("./models/Plant");
 
 // Replace with your MongoDB connection string
-const MONGO_URI = "your-mongodb-connection-string";
+const MONGO_URI = "mongodb+srv://Sanskarsatale19:Bappa%4011@cluster0.9bqg4pi.mongodb.net/greenopedia?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(async () => {

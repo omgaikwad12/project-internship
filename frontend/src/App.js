@@ -1,105 +1,71 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 function App() {
+  const [search, setSearch] = useState("");
   const [plants, setPlants] = useState([]);
-  const [newPlant, setNewPlant] = useState({ name: "", description: "" });
-  const [searchTerm, setSearchTerm] = useState(""); // search state
 
-  useEffect(() => {
-    fetchPlants();
-  }, []);
-
-  const fetchPlants = async () => {
+  const handleSearch = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/plants");
+      const res = await axios.get(`http://localhost:5000/plants?name=${search}`);
       setPlants(res.data);
     } catch (error) {
       console.error("Error fetching plants:", error);
     }
   };
 
-  const addPlant = async () => {
-    if (!newPlant.name || !newPlant.description) return;
-    try {
-      const res = await axios.post("http://localhost:5000/api/plants", newPlant);
-      setPlants([...plants, res.data]);
-      setNewPlant({ name: "", description: "" });
-    } catch (error) {
-      console.error("Error adding plant:", error);
-    }
-  };
-
-  const deletePlant = async (id) => {
-    try {
-      await axios.delete(`http://localhost:5000/api/plants/${id}`);
-      setPlants(plants.filter((plant) => plant._id !== id));
-    } catch (error) {
-      console.error("Error deleting plant:", error);
-    }
-  };
-
-  // Filter plants based on search term
-  const filteredPlants = plants.filter((plant) =>
-    plant.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>🌱 Greenopedia Plant Library</h1>
+      <h1>🌱 Greenopedia</h1>
 
       {/* Search bar */}
       <input
         type="text"
-        placeholder="🔍 Search plants..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ marginBottom: "20px", padding: "5px", width: "300px" }}
+        placeholder="Search plant name..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        style={{ padding: "10px", width: "250px" }}
       />
+      <button
+        onClick={handleSearch}
+        style={{ marginLeft: "10px", padding: "10px" }}
+      >
+        Search
+      </button>
 
-      {/* Add plant form */}
-      <div>
-        <input
-          type="text"
-          placeholder="Plant name"
-          value={newPlant.name}
-          onChange={(e) => setNewPlant({ ...newPlant, name: e.target.value })}
-          style={{ marginRight: "10px" }}
-        />
-        <input
-          type="text"
-          placeholder="Description"
-          value={newPlant.description}
-          onChange={(e) =>
-            setNewPlant({ ...newPlant, description: e.target.value })
-          }
-          style={{ marginRight: "10px" }}
-        />
-        <button onClick={addPlant}>➕ Add Plant</button>
-      </div>
-
-      {/* Plant list */}
-      <ul style={{ marginTop: "20px" }}>
-        {filteredPlants.length > 0 ? (
-          filteredPlants.map((plant) => (
-            <li key={plant._id} style={{ marginBottom: "10px" }}>
-              <b>{plant.name}</b> - {plant.description}
-              <button
-                onClick={() => deletePlant(plant._id)}
-                style={{ marginLeft: "10px", color: "red" }}
-              >
-                ❌ Delete
-              </button>
-            </li>
+      {/* Results */}
+      <div style={{ marginTop: "20px" }}>
+        {plants.length > 0 ? (
+          plants.map((plant) => (
+            <div
+              key={plant._id}
+              style={{
+                border: "1px solid #ccc",
+                padding: "15px",
+                marginBottom: "10px",
+                borderRadius: "8px",
+              }}
+            >
+              <h2>{plant.name}</h2>
+              <p>{plant.description}</p>
+              {plant.image && (
+                <img
+                  src={plant.image}
+                  alt={plant.name}
+                  style={{ width: "200px", borderRadius: "5px" }}
+                />
+              )}
+            </div>
           ))
         ) : (
-          <p>No plants found.</p>
+          <p>No plants found. Try searching!</p>
         )}
-      </ul>
+      </div>
     </div>
   );
 }
 
 export default App;
+
 
 

@@ -19,8 +19,12 @@ mongoose
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Routes
+// Routes
 const plantRoutes = require("./routes/plantRoutes");
+const chatbotRoutes = require("./routes/chatbotRoutes"); // <-- added
+
 app.use("/api/plants", plantRoutes);
+app.use("/api/chatbot", chatbotRoutes); // <-- added
 
 // Test route
 app.get("/", (req, res) => {

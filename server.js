@@ -1,4 +1,3 @@
-// server.js
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
@@ -19,7 +18,6 @@ mongoose
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Routes
-// Routes
 const plantRoutes = require("./routes/plantRoutes");
 const chatbotRoutes = require("./routes/chatbotRoutes"); // <-- added
 
@@ -28,7 +26,7 @@ app.use("/api/chatbot", chatbotRoutes); // <-- added
 
 // Test route
 app.get("/", (req, res) => {
-  res.send("🌱 Greenopedia backend is running with MongoDB!");
+  res.send("🌱 Greenopedia backend is running with MongoDB & Chatbot!");
 });
 
 // Start server
@@ -36,6 +34,3 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`✅ Greenopedia backend running on http://localhost:${PORT}`);
 });
-
-
-

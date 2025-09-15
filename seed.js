@@ -28,7 +28,7 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
         scientificName: "Azadirachta indica",
         description: "Neem is a fast-growing tree native to India, known for its medicinal properties.",
         habitat: "Tropical and subtropical regions",
-        medicinalUses: "Used in Ayurveda for skin treatments, immunity boosting, and pest control."
+        medicinalUses: "Used in Ayurveda for skin treatments, immunity boosting, and pest control ."
       }
     ]);
 

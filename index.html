@@ -41,13 +41,26 @@
                 <p>95% Plant survival rate</p>
             </div>
         </div>
-         <h1>🌱 Plant Identifier</h1>
- <form id="plant-form">
-  <label for="image" class="custom-btn">🌱 Upload Plant Image</label>
-  <input type="file" id="image" name="image" accept="image/*" class="file-input" />
-  <button type="submit" class="custom-btn">🔍 Identify Plant</button>
-</form>
+         <h1 style="text-align:center; font-family:Arial, sans-serif; color:#2e7d32; margin-bottom:20px;">
+  🌱 Plant Identifier
+</h1>
 
+<form id="plant-form" style="display:flex; flex-direction:column; align-items:center; gap:15px; font-family:Arial, sans-serif;">
+
+  <label for="image" 
+    style="background:#43a047; color:white; padding:12px 20px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; box-shadow:0px 4px 8px rgba(0,0,0,0.2);">
+    🌱 Upload Plant Image
+  </label>
+
+  <input type="file" id="image" name="image" accept="image/*" 
+    style="display:none;" class="file-input" />
+
+  <button type="submit" 
+    style="background:#1b5e20; color:white; padding:12px 25px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; font-size:16px; transition:0.3s; box-shadow:0px 4px 8px rgba(0,0,0,0.2);">
+    🔍 Identify Plant
+  </button>
+
+</form>
   <div class="result" id="result"></div>
 
         <section class="plant-guides-section">
@@ -235,6 +248,67 @@
             &copy; 2025 Greenopedia. All rights reserved.
         </div>
     </footer>
+
     <script src="script.js"></script>
+
+    <script src="plantserver.js"></script>
+    
+    <script>
+         document.getElementById("plant-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fileInput = document.getElementById("image");
+    if (!fileInput.files.length) {
+      alert("Please upload an image!");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", fileInput.files[0]);
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = "🔍 Identifying...";
+
+    try {
+      const res = await fetch("http://localhost:5000/identify", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      console.log("API response:", data);
+
+      // ✅ Adapted for Plant.id v3 structure
+      const suggestions = data.result?.classification?.suggestions || [];
+
+      if (suggestions.length > 0) {
+        resultDiv.innerHTML = suggestions
+          .map(
+            (plant) => `
+            <div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:10px;">
+              <h2>${plant.name} (${(plant.probability * 100).toFixed(1)}%)</h2>
+              <p><b>Common names:</b> ${plant.details?.common_names?.join(", ") || "N/A"}</p>
+              <p><b>Description:</b> ${plant.details?.wiki_description?.value || "No description"}</p>
+              <a href="${plant.details?.url}" target="_blank">🔗 More Info</a>
+              <div>
+                ${
+                  plant.similar_images?.length
+                    ? `<img src="${plant.similar_images[0].url_small}" alt="Similar plant" style="max-width:200px; margin-top:10px;" />`
+                    : ""
+                }
+              </div>
+            </div>
+          `
+          )
+          .join("");
+      } else {
+        resultDiv.innerHTML = "❌ No plant identified.";
+      }
+    } catch (err) {
+      console.error(err);
+      resultDiv.innerHTML = "⚠️ Error identifying plant.";
+    }
+  });
+    </script>>
 </body>
 </html>

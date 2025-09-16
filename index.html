@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="navbar">
-        <a class="logo" href="#">Greenopedia - <span>Explore The World Of Plants</span></a>
+        <a class="logo" href="#">Greenopedia - <span><br>Explore The World Of Plants</span></a>
         <a href="#">Home</a>
         <a href="#">Plant Library</a>
         <a href="#">Care Guide</a>
@@ -41,6 +41,14 @@
                 <p>95% Plant survival rate</p>
             </div>
         </div>
+         <h1>🌱 Plant Identifier</h1>
+ <form id="plant-form">
+  <label for="image" class="custom-btn">🌱 Upload Plant Image</label>
+  <input type="file" id="image" name="image" accept="image/*" class="file-input" />
+  <button type="submit" class="custom-btn">🔍 Identify Plant</button>
+</form>
+
+  <div class="result" id="result"></div>
 
         <section class="plant-guides-section">
             <h2 class="section-title">Popular Plant Guides</h2>

@@ -23,8 +23,10 @@ body {
 }
 
 .navbar .logo {
+    text-align: center;
+    width: 800px;
     padding-right: 150px;
-    font-size: 30px;
+    font-size: 29px;
     color: rgb(29, 255, 29);
     margin-left: 10px;
     text-decoration: none;
@@ -43,7 +45,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #c8e6c9;
+    color: #213a22;
 }
 
 .navbar .fa-magnifying-glass {

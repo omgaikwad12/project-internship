@@ -5,12 +5,13 @@
 #hide {
     font-size: 50px;
     text-align: center;
-    background-color: rgb(222, 226, 221);
+    background-color: #6a994e;
     height: 200px;
+    color: #fff;
 }
 #paragraphs {
     font-size: 20px;
-    color: rgb(31, 30, 30);
+    color: #fff;
 }
 .nav-search {
     display: flex;
@@ -107,4 +108,11 @@
     font-size: 16px;
     color: black;
     margin-top: auto;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
 }

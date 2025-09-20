@@ -250,3 +250,45 @@ body {
     align-items: center;
     font-size: 0.85rem;
 }
+
+/* Plant card design */
+.plant-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.plant-card .card-content {
+  padding: 15px;
+  background: #fff;
+}
+
+.plant-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+
+.plant-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.plant-card .card-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+

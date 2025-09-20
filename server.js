@@ -1,5 +1,5 @@
 const express = require("express");
-<<<<<<< HEAD
+ HEAD
 const multer = require("multer");
 const axios = require("axios");
 const fs = require("fs");
@@ -61,7 +61,6 @@ const path = require("path");
 // Serve frontend index.html
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
-=======
 const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
@@ -96,5 +95,4 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`✅ Greenopedia backend running on http://localhost:${PORT}`);
->>>>>>> a08b54be657747dc1940eecdb2a2f49bf21929f6
 });

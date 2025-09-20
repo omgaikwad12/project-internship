@@ -284,11 +284,10 @@ body {
 }
 
 .plant-card .card-image {
-  width: 100%;
+  width: 99%;
   height: 180px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-

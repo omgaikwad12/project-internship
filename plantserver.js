@@ -2,11 +2,15 @@ const express = require("express");
 const multer = require("multer");
 const axios = require("axios");
 const fs = require("fs");
+ 
+const path = require("path");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
 
 const API_KEY = "WqZIsc0arrvb2IEysFupb5cINJA2V5R98aJ6v9P1yJH0fjZG3q"; // put your key here
+
+app.use(express.static(path.join(__dirname)));
 
 // Allow frontend to access backend
 app.use((req, res, next) => {
@@ -54,8 +58,7 @@ app.post("/identify", upload.single("image"), async (req, res) => {
 app.listen(5000, () => {
   console.log("Server running on http://localhost:5000");
 });
- 
-const path = require("path");
+
 
 // Serve frontend index.html
 app.get("/", (req, res) => {

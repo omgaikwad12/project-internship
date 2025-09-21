@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const OpenAI = require("openai");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // ✅ now it will load from .env
-});
+// Gemini setup
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Chatbot endpoint
 router.post("/", async (req, res) => {
@@ -16,21 +16,15 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ error: "Message is required" });
     }
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // or "gpt-4o", "gpt-3.5-turbo"
-      messages: [{ role: "user", content: message }],
-    });
+    const result = await model.generateContent(message);
 
     res.json({
-      reply: response.choices[0].message.content,
+      reply: result.response.text(),
     });
   } catch (err) {
-    console.error("Chatbot error:", err);
+    console.error("❌ Chatbot error:", err);
     res.status(500).json({ error: "Something went wrong with chatbot" });
   }
 });
 
 module.exports = router;
-
-
-

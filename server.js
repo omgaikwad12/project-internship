@@ -27,6 +27,8 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 // Routes
 const plantRoutes = require("./routes/plantRoutes");
 app.use("/api/plants", plantRoutes);
+const chatbotRoutes = require("./routes/chatbotRoutes");
+app.use("/api/chatbot", chatbotRoutes);
 
 // Chatbot route (no need for separate file unless you want modularity)
 app.post("/api/chatbot", async (req, res) => {

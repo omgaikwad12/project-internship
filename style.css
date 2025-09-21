@@ -116,18 +116,6 @@ body {
     width: 250px;
 }
 
-/* Stats Section */
-.stats-section {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-}
-
-.stat-item p {
-    font-size: 20px;
-    color: green;
-}
-
 /* General Sections */
 .plant-guides-section, .shop-category-section, .cta-bottom-section {
     padding: 20px;

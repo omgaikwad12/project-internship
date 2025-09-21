@@ -394,7 +394,39 @@
         </div>
     </footer>
    
+        <!-- ✅ Chatbot script -->
     <script>
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatbox = document.getElementById("chatbox");
+      const message = input.value.trim();
+
+      if (!message) return;
+
+      // Show user message
+      chatbox.innerHTML += `<p><b>You:</b> ${message}</p>`;
+
+      input.value = "";
+
+      try {
+        const res = await fetch("http://localhost:5001/api/chatbot", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message }),
+        });
+
+        const data = await res.json();
+
+        chatbox.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+      } catch (error) {
+        chatbox.innerHTML += `<p><b>Bot:</b> ⚠️ Error connecting to server</p>`;
+      }
+    }
+    </script>
+  </body>
+</html>
+<script>
          document.getElementById("plant-form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -418,6 +450,14 @@
 
       const data = await res.json();
       console.log("API response:", data);
+
+      <!-- 🌱 Chatbot Section -->
+<div id="chatbot" style="border:1px solid #ccc; padding:10px; width:350px; margin:20px auto;">
+  <h3>🌱 Greenopedia Chatbot</h3>
+  <div id="chatbox" style="height:250px; overflow-y:auto; border:1px solid #ddd; margin-bottom:10px; padding:5px;"></div>
+  <input type="text" id="userInput" placeholder="Ask me about plants..." style="width:70%; padding:5px;"></input>
+  <button onclick="sendMessage()" style="padding:5px 10px;">Send</button>
+</div>
 
       // ✅ Adapted for Plant.id v3 structure
       const suggestions = data.result?.classification?.suggestions || [];
@@ -448,8 +488,13 @@
     } catch (err) {
       console.error(err);
       resultDiv.innerHTML = "⚠️ Error identifying plant.";
+        
+
     }
   });
-    </script>>
-</body>
+     
+    </script>
+  </body>
 </html>
+
+   

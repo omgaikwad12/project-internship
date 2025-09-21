@@ -1,20 +1,38 @@
 
-const express = require("express");
-const cors = require("cors");
-const morgan = require("morgan");
-require("dotenv").config();
+document.addEventListener("DOMContentLoaded", () => {
+  const chatForm = document.getElementById("chat-form");
+  const chatInput = document.getElementById("chat-input");
+  const chatMessages = document.getElementById("chat-messages");
 
-const app = express();
+  function addMessage(sender, text) {
+    const msg = document.createElement("div");
+    msg.classList.add("message", sender);
+    msg.textContent = text;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
 
-app.use(express.json());
-app.use(cors());
-app.use(morgan("dev"));
+  chatForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-app.get("/", (req, res) => {
-  res.send("🌱 Greenopedia backend is running!");
-});
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`✅ Greenopedia backend running on http://localhost:${PORT}`);
+    addMessage("user", userMessage);
+    chatInput.value = "";
+
+    try {
+      const res = await fetch("http://localhost:5001/api/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userMessage }),
+      });
+
+      const data = await res.json();
+      addMessage("bot", data.reply || "⚠️ No reply received");
+    } catch (err) {
+      console.error("Chatbot error:", err);
+      addMessage("bot", "⚠️ Error connecting to chatbot server");
+    }
+  });
 });

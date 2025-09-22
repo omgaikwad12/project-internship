@@ -17,7 +17,11 @@
         <a href="careguide.html">Care Guide</a>
         <a href="about.html">About</a>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input class="search-input" type="text" placeholder="Search">
+        <form id="searchForm">
+  <input type="text" id="searchInput" placeholder="Search plant..." />
+  <button type="submit">Search</button>
+</form>
+<div id="results"></div>
     </header>
 
     <main>
@@ -310,38 +314,40 @@
         </div>
     </footer>
    
-        <!-- ✅ Chatbot script -->
-    <script>
-    async function sendMessage() {
-      const input = document.getElementById("userInput");
-      const chatbox = document.getElementById("chatbox");
-      const message = input.value.trim();
+     
 
-      if (!message) return;
+<script>
+async function searchPlant() {
+  const query = document.getElementById("searchInput").value;
+  if (!query) return alert("Please enter a plant name");
 
-      // Show user message
-      chatbox.innerHTML += `<p><b>You:</b> ${message}</p>`;
+  try {
+    const res = await fetch(`http://localhost:5000/api/plants/search?q=${query}`);
+    const data = await res.json();
 
-      input.value = "";
+    const resultDiv = document.getElementById("plantResult");
+    resultDiv.innerHTML = "";
 
-      try {
-        const res = await fetch("http://localhost:5001/api/chatbot", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message }),
-        });
-
-        const data = await res.json();
-
-        chatbox.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
-        chatbox.scrollTop = chatbox.scrollHeight;
-      } catch (error) {
-        chatbox.innerHTML += `<p><b>Bot:</b> ⚠️ Error connecting to server</p>`;
-      }
+    if (data.data && data.data.length > 0) {
+      const plant = data.data[0]; // take first result
+      resultDiv.innerHTML = `
+        <h2>${plant.common_name || "No common name"}</h2>
+        <p><strong>Scientific:</strong> ${plant.scientific_name}</p>
+        <p><strong>Family:</strong> ${plant.family_common_name || "Unknown"}</p>
+        <img src="${plant.image_url || ""}" alt="${plant.common_name}" width="200">
+      `;
+    } else {
+      resultDiv.innerHTML = "<p>No plant found.</p>";
     }
-    </script>
-  </body>
-</html>
+  } catch (err) {
+    console.error(err);
+    document.getElementById("plantResult").innerHTML = "<p>⚠️ Error fetching plant info.</p>";
+  }
+}
+</script>
+
+  
+
 <script>
          document.getElementById("plant-form").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -367,13 +373,7 @@
       const data = await res.json();
       console.log("API response:", data);
 
-      <!-- 🌱 Chatbot Section -->
-<div id="chatbot" style="border:1px solid #ccc; padding:10px; width:350px; margin:20px auto;">
-  <h3>🌱 Greenopedia Chatbot</h3>
-  <div id="chatbox" style="height:250px; overflow-y:auto; border:1px solid #ddd; margin-bottom:10px; padding:5px;"></div>
-  <input type="text" id="userInput" placeholder="Ask me about plants..." style="width:70%; padding:5px;"></input>
-  <button onclick="sendMessage()" style="padding:5px 10px;">Send</button>
-</div>
+      
 
       // ✅ Adapted for Plant.id v3 structure
       const suggestions = data.result?.classification?.suggestions || [];

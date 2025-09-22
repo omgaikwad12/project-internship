@@ -20,9 +20,6 @@ mongoose
   .then(() => console.log("✅ Connected to MongoDB Atlas"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-const plantRoutes = require("./routes/plants");
-app.use("/api/plants", plantRoutes);
-
 // Test route
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");

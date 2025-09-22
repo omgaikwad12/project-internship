@@ -16,12 +16,6 @@
         <a href="exploreplant.html">Plant Library</a>
         <a href="careguide.html">Care Guide</a>
         <a href="about.html">About</a>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <form id="searchForm">
-  <input type="text" id="searchInput" placeholder="Search plant..." />
-  <button type="submit">Search</button>
-</form>
-<div id="results"></div>
     </header>
 
     <main>
@@ -315,36 +309,6 @@
     </footer>
    
      
-
-<script>
-async function searchPlant() {
-  const query = document.getElementById("searchInput").value;
-  if (!query) return alert("Please enter a plant name");
-
-  try {
-    const res = await fetch(`http://localhost:5000/api/plants/search?q=${query}`);
-    const data = await res.json();
-
-    const resultDiv = document.getElementById("plantResult");
-    resultDiv.innerHTML = "";
-
-    if (data.data && data.data.length > 0) {
-      const plant = data.data[0]; // take first result
-      resultDiv.innerHTML = `
-        <h2>${plant.common_name || "No common name"}</h2>
-        <p><strong>Scientific:</strong> ${plant.scientific_name}</p>
-        <p><strong>Family:</strong> ${plant.family_common_name || "Unknown"}</p>
-        <img src="${plant.image_url || ""}" alt="${plant.common_name}" width="200">
-      `;
-    } else {
-      resultDiv.innerHTML = "<p>No plant found.</p>";
-    }
-  } catch (err) {
-    console.error(err);
-    document.getElementById("plantResult").innerHTML = "<p>⚠️ Error fetching plant info.</p>";
-  }
-}
-</script>
 
   
 

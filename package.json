@@ -9,7 +9,6 @@
     "lint": "echo 'Add your linter here'"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.11.5",
     "axios": "^1.11.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

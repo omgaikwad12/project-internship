@@ -197,90 +197,6 @@
   </div>
 </section>
 <br>
-    <div class="chat-icon" id="chatIcon">
-        <img src="https://img.icons8.com/material-rounded/48/ffffff/chat--v1.png" alt="Chat Icon"/>
-    </div>
-
-    <div class="chat-popup" id="chatPopup">
-        <div class="chat-header">
-            <h3>Support Chat</h3>
-            <button class="chat-close-btn" id="closeBtn">&times;</button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="message bot-message">
-                <p>Hello! How may I help you today?</p>
-            </div>
-        </div>
-        <div class="chat-input-area">
-            <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
-            <button id="sendBtn">Send</button>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const chatIcon = document.getElementById('chatIcon');
-            const chatPopup = document.getElementById('chatPopup');
-            const closeBtn = document.getElementById('closeBtn');
-            const sendBtn = document.getElementById('sendBtn');
-            const userInput = document.getElementById('userInput');
-            const chatMessages = document.getElementById('chatMessages');
-
-            chatIcon.addEventListener('click', () => {
-                chatPopup.classList.add('show');
-            });
-
-            closeBtn.addEventListener('click', () => {
-                chatPopup.classList.remove('show');
-            });
-
-            const sendMessage = () => {
-                const messageText = userInput.value.trim();
-                if (messageText === '') return;
-
-                addMessage(messageText, 'user');
-                userInput.value = '';
-
-                setTimeout(() => {
-                    const botResponse = getBotResponse(messageText);
-                    addMessage(botResponse, 'bot');
-                }, 600);
-            };
-
-            sendBtn.addEventListener('click', sendMessage);
-            userInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-
-            const addMessage = (text, sender) => {
-                const messageElement = document.createElement('div');
-                messageElement.classList.add('message', `${sender}-message`);
-                const textElement = document.createElement('p');
-                textElement.textContent = text;
-                messageElement.appendChild(textElement);
-                chatMessages.appendChild(messageElement);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            };
-
-            const getBotResponse = (userMessage) => {
-                const msg = userMessage.toLowerCase();
-                if (msg.includes('hello') || msg.includes('hi')) {
-                    return 'Hi there! How can I help you?';
-                } else if (msg.includes('price') || msg.includes('cost')) {
-                    return 'Our pricing is available on the pricing page.';
-                } else if (msg.includes('support') || msg.includes('help')) {
-                    return 'Sure, I can help. What seems to be the problem?';
-                } else if (msg.includes('bye')) {
-                    return 'Goodbye! Have a great day!';
-                } else {
-                    return "I'm sorry, I'm not sure how to answer that.";
-                }
-            };
-        });
-    </script>
-
         <section class="shop-category-section">
             <h2 class="section-title">Shop by Category</h2>
             <p class="section-description">Find the perfect plant for your space and lifestyle</p>
@@ -384,7 +300,7 @@
                 <br>
                 <div class="newsletter-form">
                     <h4>Stay Updated</h4>
-                    <input type="text" placeholder="Your email">
+                    <input type="email" placeholder="Your email">
                 </div>
             </ul>
         </div>

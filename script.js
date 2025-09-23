@@ -1,66 +1,63 @@
-// Get references to the HTML elements
-const searchInput = document.getElementById('search-input');
-const suggestionsBox = document.getElementById('suggestions-box');
-const searchForm = document.getElementById('search-form');
-
-// --- Sample Data for Suggestions ---
-// In a real application, you would fetch this from a server/API.
-const sampleKeywords = [
-    'HTML tutorial',
-    'CSS examples',
-    'JavaScript basics',
-    'How to code',
-    'Web development',
-    'Python for beginners',
-    'Responsive web design',
-    'CSS Grid vs Flexbox',
-    'Learn React.js',
-    'Node.js projects',
-    'What is an API'
-];
-
-// Listen for input events on the search box
-searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all 'Learn More' buttons
+    const learnMoreButtons = document.querySelectorAll('.btn-learn-more');
     
-    // Clear previous suggestions
-    suggestionsBox.innerHTML = '';
+    // Get all modals
+    const modals = document.querySelectorAll('.modal');
 
-    if (query.length === 0) {
-        suggestionsBox.style.display = 'none';
-        return;
-    }
+    // Function to open a modal
+    const openModal = (modalId) => {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('show');
+            // Close modal if escape key is pressed
+            document.addEventListener('keydown', handleEscKey);
+        }
+    };
 
-    // Filter keywords that match the query
-    const matchingSuggestions = sampleKeywords.filter(keyword => 
-        keyword.toLowerCase().includes(query)
-    );
+    // Function to close a modal
+    const closeModal = (modal) => {
+        if (modal) {
+            modal.classList.remove('show');
+            document.removeEventListener('keydown', handleEscKey);
+        }
+    };
 
-    // Display the matching suggestions
-    if (matchingSuggestions.length > 0) {
-        matchingSuggestions.forEach(suggestion => {
-            const suggestionItem = document.createElement('div');
-            suggestionItem.className = 'suggestion-item';
-            suggestionItem.textContent = suggestion;
-            
-            // Add a click event to each suggestion
-            suggestionItem.addEventListener('click', () => {
-                searchInput.value = suggestion; // Put suggestion in search box
-                suggestionsBox.style.display = 'none'; // Hide suggestions
-                searchForm.submit(); // Submit the form
-            });
-            
-            suggestionsBox.appendChild(suggestionItem);
+    // Function to handle Escape key press
+    const handleEscKey = (event) => {
+        if (event.key === 'Escape') {
+            const openModal = document.querySelector('.modal.show');
+            if (openModal) {
+                closeModal(openModal);
+            }
+        }
+    };
+
+    // Add click event to each 'Learn More' button
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const plantName = button.getAttribute('data-plant');
+            openModal(`${plantName}-modal`);
         });
-        suggestionsBox.style.display = 'block';
-    } else {
-        suggestionsBox.style.display = 'none';
-    }
-});
+    });
 
-// Hide suggestions when clicking outside the search container
-document.addEventListener('click', (event) => {
-    if (!searchInput.contains(event.target)) {
-        suggestionsBox.style.display = 'none';
-    }
+    // Add click event to all modals for closing
+    modals.forEach(modal => {
+        // Find the close button inside the modal
+        const closeButton = modal.querySelector('.close-button');
+        
+        // Close when the 'x' button is clicked
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                closeModal(modal);
+            });
+        }
+
+        // Close when the background is clicked
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal(modal);
+            }
+        });
+    });
 });

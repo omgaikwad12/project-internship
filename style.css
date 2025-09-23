@@ -16,7 +16,7 @@ body {
 /* Header */
 .navbar {
     background-color: rgb(158, 154, 154);
-    height: 70px;
+    height: 90px;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -57,6 +57,59 @@ body {
     border-radius: 5px;
     padding: 5px 10px;
     border: none;
+}
+
+/* Container for the search bar */
+.search-container {
+    width: 100%;
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin: 20px;
+}
+
+/* Style for the form element */
+.search-container form {
+    display: flex;
+    position: relative;
+}
+
+/* Style for the search input field */
+.search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px; /* Right padding to make space for the button */
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Makes the search bar pill-shaped */
+    font-size: 16px;
+    outline: none; /* Removes the default outline on focus */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Style for the input field when focused */
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the search button */
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px; /* Width of the button */
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+/* Change icon color on hover */
+.search-button:hover {
+    color: #007bff;
 }
 
 /* Hero Section */

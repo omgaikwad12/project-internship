@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Plant Guides - Greenopedia</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="popularplant.css">
+</head>
+<body>
+
+<section class="plant-guides-section">
+    <h2 class="section-title">Popular Plant Guides</h2>
+    <p class="section-description">Learn about these wonderful plants that are perfect for beginners and plant enthusiasts alike.</p>
+    
+    <div class="plant-grid">
+
+        <!-- Plant Card: Monstera Deliciosa -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1614594975525-e4d1cf94d952?q=80&w=1887" alt="Monstera Deliciosa">
+            </div>
+            <div class="card-content">
+                <h3>Monstera Deliciosa</h3>
+                <p>Known for its stunning split leaves and air-purifying qualities.</p>
+                <button class="btn-learn-more" data-plant="monstera">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- Plant Card: Fiddle Leaf Fig -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1587584189398-7c15e8b44613?q=80&w=1887" alt="Fiddle Leaf Fig">
+            </div>
+            <div class="card-content">
+                <h3>Fiddle Leaf Fig</h3>
+                <p>A popular statement plant with large, violin-shaped leaves.</p>
+                <button class="btn-learn-more" data-plant="fiddle-leaf">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Plant Card: Snake Plant -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1588592118334-04539a4906a2?q=80&w=1887" alt="Snake Plant">
+            </div>
+            <div class="card-content">
+                <h3>Snake Plant</h3>
+                <p>Nearly indestructible plant that tolerates neglect and low light.</p>
+                <button class="btn-learn-more" data-plant="snake-plant">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- Plant Card: Golden Pothos -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600441983058-2041261545b7?q=80&w=1887" alt="Golden Pothos">
+            </div>
+            <div class="card-content">
+                <h3>Golden Pothos</h3>
+                <p>Fast-growing trailing plant perfect for hanging baskets.</p>
+                <button class="btn-learn-more" data-plant="pothos">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- Plant Card: Pilea Peperomioides -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600435132243-71a794a44419?q=80&w=1887" alt="Pilea Peperomioides">
+            </div>
+            <div class="card-content">
+                <h3>Pilea Peperomioides</h3>
+                <p>A popular plant with unique, coin-shaped leaves.</p>
+                <button class="btn-learn-more" data-plant="pilea">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- Plant Card: Calathea -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1617830248037-33b680195e6f?q=80&w=1887" alt="Calathea">
+            </div>
+            <div class="card-content">
+                <h3>Calathea</h3>
+                <p>Known as a "prayer plant," with leaves that move throughout the day.</p>
+                <button class="btn-learn-more" data-plant="calathea">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- Plant Card: Aloe Vera -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1520339999757-12c84646de6a?q=80&w=1887" alt="Aloe Vera">
+            </div>
+            <div class="card-content">
+                <h3>Aloe Vera</h3>
+                <p>A popular medicinal plant, valued for its ability to heal burns and moisturize skin.</p>
+                <button class="btn-learn-more" data-plant="aloe">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- Plant Card: Money Tree -->
+        <div class="plant-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1613529385247-5112185d214a?q=80&w=1887" alt="Money Tree">
+            </div>
+            <div class="card-content">
+                <h3>Money Tree</h3>
+                <p>Believed to bring good luck and prosperity.</p>
+                <button class="btn-learn-more" data-plant="money-tree">Learn More</button>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- MODALS SECTION: Hidden by default -->
+
+<!-- Modal for Monstera Deliciosa -->
+<div id="monstera-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Monstera Deliciosa</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Prefers bright, indirect sunlight. Too much direct sun can scorch the leaves.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Water thoroughly when the top 2 inches of soil feel dry. Avoid letting it sit in water.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Use a peat-based, well-draining potting mix.</p>
+            <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Mildly toxic to humans and toxic to cats and dogs if ingested.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> The iconic splits in its leaves, called fenestrations, help it withstand strong winds in its native habitat.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Fiddle Leaf Fig -->
+<div id="fiddle-leaf-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Fiddle Leaf Fig</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Needs lots of bright, filtered light. A spot near an east-facing window is often perfect.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Water when the top inch of soil is dry. They are sensitive to overwatering.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Requires a well-draining soil mix to prevent waterlogging.</p>
+            <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Toxic to cats and dogs.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> Known for being a bit dramatic and will drop its leaves if moved too often or exposed to drafts.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Snake Plant -->
+<div id="snake-plant-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Snake Plant</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Extremely tolerant. Survives in low light but thrives in bright, indirect light.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Drought-tolerant. Water only when the soil is completely dry. Overwatering is its biggest enemy.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Prefers a sandy, well-draining mix, like cactus soil.</p>
+            <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Mildly toxic to pets and humans if ingested.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> A top-rated air-purifying plant, known for converting CO2 into oxygen at night.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Golden Pothos -->
+<div id="pothos-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Golden Pothos</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Very adaptable. Does well in low light to bright, indirect light. Variegation is more pronounced with more light.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Water when the top inch of soil feels dry. It's quite forgiving if you forget.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Any standard, well-draining potting soil will do.</p>
+            <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Toxic to cats and dogs.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> Often called "devil's ivy" because it's almost impossible to kill and stays green even in the dark.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Pilea -->
+<div id="pilea-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Pilea Peperomioides</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Prefers bright, indirect light. Direct sun will burn the leaves.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Water when the top 1-2 inches of soil are dry. The leaves will droop when thirsty.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Use a well-aerated, fast-draining potting mix.</p>
+            <p><i class="fa-solid fa-paw"></i> <strong>Toxicity:</strong> Non-toxic and safe for pets and humans.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> Nicknamed the "friendship plant" because it produces many baby plantlets that are easy to share.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Calathea -->
+<div id="calathea-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Calathea</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Prefers medium to bright indirect light. Direct sun will fade the leaf patterns.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Keep soil consistently moist. Use filtered or distilled water if possible.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Needs a moisture-retentive but well-draining mix.</p>
+            <p><i class="fa-solid fa-paw"></i> <strong>Toxicity:</strong> Non-toxic and pet-safe.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> Leaves fold up at night, like hands in prayer, and lower during the day.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Aloe Vera -->
+<div id="aloe-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Aloe Vera</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Loves bright, direct sunlight.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Needs very little water. Water deeply but infrequently, allowing soil to dry out completely.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> A cactus or succulent mix with excellent drainage is essential.</p>
+            <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Gel is medicinal, but the outer skin is toxic to pets.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> The soothing gel inside its leaves has been used for centuries to treat burns and skin irritations.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Money Tree -->
+<div id="money-tree-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Money Tree</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Thrives in bright, indirect light but can adapt to lower light.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Water thoroughly when the top 2-4 inches of soil are dry.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> A well-draining, nutrient-rich soil is best.</p>
+            <p><i class="fa-solid fa-paw"></i> <strong>Toxicity:</strong> Non-toxic and pet-safe.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> Often sold with a braided trunk, it is a symbol of good luck and prosperity in Feng Shui.</p>
+        </div>
+    </div>
+</div>
+
+<script src="popularplant.js"></script>
+
+</body>
+</html>

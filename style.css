@@ -130,7 +130,6 @@ body {
 .search-button:hover {
     color: #4CAF50;
 }
-
 /* Hero Section */
 .hero {
     padding: 20px;
@@ -153,7 +152,6 @@ body {
     margin-left: 20px;
     margin-top: 20px;
 }
-
 .hero-image {
     position: absolute;
     right: 150px;

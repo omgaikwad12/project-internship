@@ -13,6 +13,9 @@ app.use(morgan("dev"));
 
 // Serve frontend from "public" folder
 app.use(express.static("public"));
+const feedbackRoutes = require("./routes/feedback");
+app.use("/api/feedback", feedbackRoutes);
+
 
 // MongoDB connection
 mongoose
@@ -24,6 +27,8 @@ mongoose
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
+
+
 
 // Start server
 const PORT = process.env.PORT || 5501;

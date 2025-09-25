@@ -11,24 +11,22 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
-// Serve frontend from "public" folder
-app.use(express.static("public"));
-const feedbackRoutes = require("./routes/feedback");
-app.use("/api/feedback", feedbackRoutes);
-
-
 // MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Connected to MongoDB Atlas"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
+const plantRoutes = require("./routes/plants");
+const feedbackRoutes = require("./routes/feedback");
+
+app.use("/api/plants", plantRoutes);
+app.use("/api/feedback", feedbackRoutes);
+
 // Test route
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.send("🌱 Greenopedia backend is running with MongoDB connection.");
 });
-
-
 
 // Start server
 const PORT = process.env.PORT || 5501;

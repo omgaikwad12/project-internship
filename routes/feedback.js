@@ -1,32 +1,34 @@
 const express = require("express");
 const router = express.Router();
-const Feedback = require("../models/feedback");
+const Feedback = require("../models/Feedback");
 
-// POST: Save feedback
+// POST feedback
 router.post("/", async (req, res) => {
   try {
     const { email, message } = req.body;
 
     if (!email || !message) {
-      return res.status(400).json({ message: "Email and message are required" });
+      return res.status(400).json({ error: "Email and message are required" });
     }
 
     const feedback = new Feedback({ email, message });
-    await feedback.save();
+    await feedback.save();   // 👈 this saves to MongoDB
 
-    res.status(201).json({ message: "✅ Feedback received. Thank you!" });
+    res.status(201).json({ message: "✅ Feedback saved successfully", feedback });
   } catch (err) {
-    res.status(500).json({ message: "❌ Server error", error: err.message });
+    console.error("❌ Error saving feedback:", err);
+    res.status(500).json({ error: "Failed to save feedback" });
   }
 });
 
-// GET: View all feedback (for admin use)
+// GET all feedbacks
 router.get("/", async (req, res) => {
   try {
     const feedbacks = await Feedback.find().sort({ date: -1 });
     res.json(feedbacks);
   } catch (err) {
-    res.status(500).json({ message: "❌ Error fetching feedback" });
+    console.error("❌ Error fetching feedback:", err);
+    res.status(500).json({ error: "Failed to fetch feedback" });
   }
 });
 

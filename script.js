@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // =============================
+    // MODAL HANDLING
+    // =============================
+
     // Get all 'Learn More' buttons
     const learnMoreButtons = document.querySelectorAll('.btn-learn-more');
-    
+
     // Get all modals
     const modals = document.querySelectorAll('.modal');
 
@@ -43,21 +47,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add click event to all modals for closing
     modals.forEach(modal => {
-        // Find the close button inside the modal
         const closeButton = modal.querySelector('.close-button');
-        
-        // Close when the 'x' button is clicked
         if (closeButton) {
             closeButton.addEventListener('click', () => {
                 closeModal(modal);
             });
         }
+    });
 
-        // Close when the background is clicked
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal(modal);
+    // =============================
+    // FEEDBACK FORM HANDLING
+    // =============================
+
+    const feedbackForm = document.querySelector("form"); // your footer form
+    if (feedbackForm) {
+        feedbackForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // Collect input values
+            const email = feedbackForm.querySelector("input[type='text'], input[type='email']").value;
+            const message = feedbackForm.querySelector("textarea").value;
+
+            if (!email || !message) {
+                alert("⚠️ Please fill in both email and message.");
+                return;
+            }
+
+            try {
+                const res = await fetch("http://localhost:5501/api/feedback", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, message }),
+                });
+
+                const data = await res.json();
+
+                if (res.ok) {
+                    alert("✅ Feedback sent successfully!");
+                    feedbackForm.reset(); // clear the form
+                } else {
+                    alert("❌ Error: " + (data.message || "Something went wrong"));
+                }
+            } catch (err) {
+                console.error("Error submitting feedback:", err);
+                alert("⚠️ Unable to send feedback. Check backend.");
             }
         });
-    });
+    }
 });

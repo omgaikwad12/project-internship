@@ -9,23 +9,6 @@
     <script src="plantserver.js"></script>
     <script src="script.js"></script>
 </head>
-<script>
-  document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    const res = await fetch("http://localhost:5501/api/feedback", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, message }),
-    });
-
-    const data = await res.json();
-    document.getElementById("feedbackStatus").innerText = data.message;
-  });
-</script>
 
 <body>
     <header class="navbar">
@@ -35,7 +18,7 @@
                 <a href="index.html">Home</a>
                 <a href="exploreplant.html">Plant Library</a>
                 <a href="careguide.html">Care Guide</a>
-                <a href="about.html">About</a>
+                <a href="about.html">About Us</a>
             </div>
         <div class="search-container">
         <form action="https://www.google.com/search" method="get">
@@ -99,6 +82,17 @@
                 <button class="btn-learn-more" data-plant="monstera">Learn More</button>
             </div>
         </div>
+
+        <div class="plant-card">
+    <div class="card-image">
+        <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:200,cw:1200,ch:1200,q:80,w:1200/6wi4Cxxypwb7TmmW4h6VQm.jpg" alt="Croton Plant">
+    </div>
+    <div class="card-content">
+        <h3>Croton Plant</h3>
+        <p>Famous for its bold, colorful foliage with striking patterns of red, yellow, orange, and green.</p>
+        <button class="btn-learn-more" data-plant="croton">Learn More</button>
+    </div>
+</div>
         
         <!-- Plant Card: Fiddle Leaf Fig -->
         <div class="plant-card">
@@ -200,6 +194,20 @@
             <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Use a peat-based, well-draining potting mix.</p>
             <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Mildly toxic to humans and toxic to cats and dogs if ingested.</p>
             <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> The iconic splits in its leaves, called fenestrations, help it withstand strong winds in its native habitat.</p>
+        </div>
+    </div>
+</div>
+
+<div id="croton-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Croton Plant</h2>
+        <div class="modal-details">
+            <p><i class="fa-solid fa-sun"></i> <strong>Light:</strong> Needs bright, indirect light to maintain vibrant colors. Can tolerate some direct sunlight.</p>
+            <p><i class="fa-solid fa-droplet"></i> <strong>Water:</strong> Keep soil evenly moist but not soggy. Allow the top inch of soil to dry out before watering again.</p>
+            <p><i class="fa-solid fa-seedling"></i> <strong>Soil:</strong> Prefers a rich, well-draining potting mix with organic matter.</p>
+            <p><i class="fa-solid fa-skull-crossbones"></i> <strong>Toxicity:</strong> Toxic to pets and humans if ingested; may cause irritation.</p>
+            <p><i class="fa-solid fa-star"></i> <strong>Key Feature:</strong> Striking, multicolored leaves that make it a perfect ornamental houseplant.</p>
         </div>
     </div>
 </div>
@@ -321,6 +329,11 @@
             </div>
         </section>
     </main>
+
+   <div class="faq-container">
+  <a href="faq.html" class="faq">Frequently Asked Question</a>
+</div>
+
     
 
     <footer class="footer">
@@ -332,10 +345,9 @@
             </ul>
             <ul class="footer-links">
                 <p>Quick Links</p>
-                <a href="index.html">Plant</a>
-                <a href="careguide.html">Plant care guide</a>
-                <a href="about.html">About us</a>
-                <a href="#">FAQ</a>
+                <a href="careguide.html">Plant Care Guide</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">FAQ</a>
             </ul>
            <ul class="footer-contact">
     <p>Contact Info</p>
@@ -360,12 +372,9 @@
 
 </ul>
         </div>
-        
-
         <div class="footer-panel-3">
             &copy; 2025 Greenopedia. All rights reserved.
-        </div>
-        
+        </div>  
     </footer>
 
 <script>
@@ -392,8 +401,6 @@
 
       const data = await res.json();
       console.log("API response:", data);
-
-      
 
       // ✅ Adapted for Plant.id v3 structure
       const suggestions = data.result?.classification?.suggestions || [];
@@ -424,12 +431,28 @@
     } catch (err) {
       console.error(err);
       resultDiv.innerHTML = "⚠️ Error identifying plant.";
-        
-
+ 
     }
   });
      
     </script>
+    <script>
+  document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const res = await fetch("http://localhost:5501/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, message }),
+    });
+
+    const data = await res.json();
+    document.getElementById("feedbackStatus").innerText = data.message;
+  });
+</script>
   </body>
 </html>
 

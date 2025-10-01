@@ -18,10 +18,12 @@ mongoose
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 const plantRoutes = require("./routes/plants");
-const feedbackRoutes = require("./routes/feedback");
+const feedbackRoutes = require("./routes/feedbackRoutes");
+
 
 app.use("/api/plants", plantRoutes);
 app.use("/api/feedback", feedbackRoutes);
+
 
 // Test route
 app.get("/", (req, res) => {

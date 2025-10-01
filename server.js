@@ -25,6 +25,7 @@ app.use("/api/plants", plantRoutes);
 app.use("/api/feedback", feedbackRoutes);
 
 
+
 // Test route
 app.get("/", (req, res) => {
   res.send("🌱 Greenopedia backend is running with MongoDB connection.");

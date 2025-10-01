@@ -1,97 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // =============================
-    // MODAL HANDLING
-    // =============================
 
-    // Get all 'Learn More' buttons
-    const learnMoreButtons = document.querySelectorAll('.btn-learn-more');
+let plants = [];
 
-    // Get all modals
-    const modals = document.querySelectorAll('.modal');
+// Load the plants.json file
+fetch("plants.json")
+  .then(res => res.json())
+  .then(data => { plants = data; })
+  .catch(err => console.error("Error loading plants.json:", err));
 
-    // Function to open a modal
-    const openModal = (modalId) => {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.classList.add('show');
-            // Close modal if escape key is pressed
-            document.addEventListener('keydown', handleEscKey);
-        }
-    };
+const searchInput = document.getElementById("plant-search");
+const suggestions = document.getElementById("search-suggestions");
+const plantDetails = document.getElementById("plant-details");
+const plantName = document.getElementById("plant-name");
+const plantDescription = document.getElementById("plant-description");
 
-    // Function to close a modal
-    const closeModal = (modal) => {
-        if (modal) {
-            modal.classList.remove('show');
-            document.removeEventListener('keydown', handleEscKey);
-        }
-    };
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  suggestions.innerHTML = "";
 
-    // Function to handle Escape key press
-    const handleEscKey = (event) => {
-        if (event.key === 'Escape') {
-            const openModal = document.querySelector('.modal.show');
-            if (openModal) {
-                closeModal(openModal);
-            }
-        }
-    };
-
-    // Add click event to each 'Learn More' button
-    learnMoreButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const plantName = button.getAttribute('data-plant');
-            openModal(`${plantName}-modal`);
-        });
+  if (query.length > 0) {
+    const matches = plants.filter(p => p.name.toLowerCase().includes(query));
+    matches.forEach(p => {
+      const li = document.createElement("li");
+      li.textContent = p.name;
+      li.onclick = () => {
+        searchInput.value = p.name;
+        suggestions.innerHTML = "";
+        showPlantDetails(p);
+      };
+      suggestions.appendChild(li);
     });
-
-    // Add click event to all modals for closing
-    modals.forEach(modal => {
-        const closeButton = modal.querySelector('.close-button');
-        if (closeButton) {
-            closeButton.addEventListener('click', () => {
-                closeModal(modal);
-            });
-        }
-    });
-
-    // =============================
-    // FEEDBACK FORM HANDLING
-    // =============================
-
-    const feedbackForm = document.querySelector("form"); // your footer form
-    if (feedbackForm) {
-        feedbackForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            // Collect input values
-            const email = feedbackForm.querySelector("input[type='text'], input[type='email']").value;
-            const message = feedbackForm.querySelector("textarea").value;
-
-            if (!email || !message) {
-                alert("⚠️ Please fill in both email and message.");
-                return;
-            }
-
-            try {
-                const res = await fetch("http://localhost:5501/api/feedback", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email, message }),
-                });
-
-                const data = await res.json();
-
-                if (res.ok) {
-                    alert("✅ Feedback sent successfully!");
-                    feedbackForm.reset(); // clear the form
-                } else {
-                    alert("❌ Error: " + (data.message || "Something went wrong"));
-                }
-            } catch (err) {
-                console.error("Error submitting feedback:", err);
-                alert("⚠️ Unable to send feedback. Check backend.");
-            }
-        });
-    }
+  }
 });
+
+function showPlantDetails(plant) {
+  plantName.textContent = plant.name;
+  plantDescription.textContent = plant.description;
+  
+  const img = document.getElementById("plant-image");
+  if (plant.image_url) {
+    img.src = plant.image_url;
+    img.style.display = "block";
+  } else {
+    img.style.display = "none";
+  }
+
+  plantDetails.style.display = "block";
+}

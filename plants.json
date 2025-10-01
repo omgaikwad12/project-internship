@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "name": "Rose",
+    "category": "Flower",
+    "description": "Rose is known as the Queen of Flowers. It comes in many colors like red, pink, yellow, and white. Roses symbolize love, beauty, and passion. They are shrubs with thorny stems and fragrant blooms. Roses require well-drained soil and full sunlight. They are used in perfumes, cosmetics, and medicines. Roses attract pollinators like bees. They are propagated through cuttings and grafting. Regular pruning improves flower quality. Roses are celebrated worldwide in gardens and bouquets.",
+    "image_url": "https://i.pinimg.com/736x/da/1c/97/da1c97e6100e17a9e4bdf5a2b2e1c043.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tulip",
+    "category": "Flower",
+    "description": "Tulip is a spring-blooming bulbous flower. It comes in bright colors like red, yellow, purple, and pink. Tulips symbolize perfect love and rebirth. They are native to Central Asia and Turkey. Tulips grow best in well-drained sandy soil. They require cold winters for bulb growth. Tulips bloom during early spring. They are widely cultivated in the Netherlands. Tulips are popular in floral arrangements. They require moderate watering and sunlight.",
+    "image_url": "https://radhakrishnaagriculture.in/cdn/shop/files/tulippink.jpg?v=1709535397"
+  },
+  {
+    "id": 3,
+    "name": "Sunflower",
+    "category": "Flower",
+    "description": "Sunflowers are known for their large yellow flower heads. They turn towards the sun in a process called heliotropism. Sunflowers symbolize positivity, loyalty, and warmth. They are native to North and South America. The seeds are edible and used for oil production. Sunflowers grow best in sunny open fields. They can reach up to 3 meters in height. Sunflowers attract bees and pollinators. They require rich soil and moderate watering. They are easy to cultivate and maintain.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRaO3bQSTSQF-fYWYL1X84dA3naOFmFVJDg&s"
+  },
+  {
+    "id": 4,
+    "name": "Marigold",
+    "category": "Flower",
+    "description": "Marigolds are vibrant flowers with orange and yellow petals. They are widely used in festivals and religious ceremonies. Marigolds naturally repel pests in gardens. They thrive in warm climates and bloom year-round in tropical areas. They require full sunlight and well-drained soil. Marigolds are easy to care for with minimal watering. They are often planted near vegetables for crop protection. Marigolds symbolize cheerfulness and creativity. They can be easily grown from seeds. They add bright colors to any garden.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4I-yHZlwMhQQYSIH8dJ2c0qLwNUIEoHb7Pg&s"
+  },
+  {
+    "id": 5,
+    "name": "Lotus",
+    "category": "Aquatic Flower",
+    "description": "Lotus is a sacred flower in many cultures. It grows in ponds and lakes. It is the national flower of India. Lotus symbolizes purity, enlightenment, and rebirth. Its roots grow in mud but flowers bloom above water. It requires shallow still water for growth. Lotus thrives in warm and sunny climates. Its seeds are edible and long-lasting. Lotus is used in food and traditional medicine. The large fragrant flowers are admired worldwide.",
+    "image_url": "https://windflowerflorist.com/cdn/shop/articles/Main_-_27-03-2025_18-15-22_1600x.jpg?v=1743070952"
+  },
+  {
+    "id": 6,
+    "name": "Hibiscus",
+    "category": "Flower",
+    "description": "Hibiscus is a tropical flowering plant with large blooms. It comes in red, pink, yellow, and white colors. Hibiscus symbolizes love, beauty, and femininity. It is native to Asia and the Pacific Islands. Hibiscus is used in teas and traditional medicine. It requires direct sunlight and warm weather. The plant attracts butterflies and hummingbirds. Hibiscus grows as shrubs or small trees. It blooms year-round in tropical climates. It is propagated easily from cuttings.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQoY9qJ7Z_yf4AcljmJVR1Tlch4TzHkTgcTw&s"
+  },
+  {
+    "id": 7,
+    "name": "Orchid",
+    "category": "Flower",
+    "description": "Orchids are one of the largest families of flowering plants. They are admired for their exotic and delicate blooms. Orchids symbolize elegance, strength, and love. They come in many colors, shapes, and sizes. Orchids require high humidity and indirect sunlight. They often grow on trees, rocks, or soil. Orchids are popular as indoor decorative plants. They need special potting mediums like bark chips. Careful watering is needed to prevent root rot. Orchids are used in perfumes and cosmetics.",
+    "image_url": "https://www.gardenhealth.com/wp-content/uploads/2019/01/orchid-on-window.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Jasmine",
+    "category": "Flower",
+    "description": "Jasmine is famous for its sweet fragrance. The flowers are small, white, or yellow. Jasmine is used in perfumes, oils, and teas. It symbolizes purity, love, and beauty. Jasmine requires warm weather and full sunlight. It needs fertile, well-drained soil. Jasmine blooms mainly in summer evenings. The flowers attract bees and butterflies. Jasmine is used in garlands and decorations. It is propagated easily through cuttings.",
+    "image_url": "https://help.gardeningexpress.co.uk/wp-content/uploads/2023/08/Untitled-design-64.png"
+  },
+  {
+    "id": 9,
+    "name": "Lily",
+    "category": "Flower",
+    "description": "Lilies are tall perennials with trumpet-shaped blooms. They come in white, pink, orange, and red colors. Lilies symbolize purity, passion, and rebirth. They are popular in bouquets and gardens. Lilies require cool climates for bulb development. They grow best in well-drained soil and sunlight. Lilies can be toxic to cats but safe for humans. They are often used in perfumes and essential oils. Lilies grow from bulbs planted in autumn. Their elegant flowers are widely admired.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJB1CMaIjbT9XFu3Mz7im2wma9sHNjdXyeGg&s"
+  },
+  {
+    "id": 10,
+    "name": "Daisy",
+    "category": "Flower",
+    "description": "Daisies are cheerful flowers with white petals and yellow centers. They symbolize innocence, purity, and simplicity. Daisies are native to Europe but found worldwide. They grow easily in lawns, meadows, and gardens. Daisies bloom in spring and summer. They require full sunlight and well-drained soil. The flowers attract pollinators like bees and butterflies. Daisies are used in herbal remedies and teas. They are easy to grow from seeds. Daisies can also be grown indoors in pots.",
+    "image_url": "images/daisy.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Lavender",
+    "category": "Herb",
+    "description": "Lavender is a fragrant herb known for its purple flowers. It is used in aromatherapy and essential oils. Lavender symbolizes calmness and serenity. It grows best in dry, sunny climates. Lavender requires well-drained sandy soil. It repels mosquitoes and insects naturally. The flowers are edible and used in teas. Lavender is a perennial plant. It needs minimal water once established. It is widely used in perfumes and cosmetics.",
+    "image_url": "images/lavender.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Aloe Vera",
+    "category": "Medicinal Plant",
+    "description": "Aloe Vera is a succulent plant known for its medicinal gel. The gel is used for burns, skin care, and healing. It thrives in warm and dry climates. Aloe requires minimal watering and sandy soil. It symbolizes healing and protection. Aloe leaves store water for survival. It can be grown indoors in pots. Aloe is used in cosmetics, food, and drinks. It purifies indoor air. Aloe is easy to propagate from offsets.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREG1ioDuPVMKAv52JeJFtURj30kCeViA4hig&s"
+  },
+  {
+    "id": 13,
+    "name": "Snake Plant",
+    "category": "Indoor Plant",
+    "description": "Snake Plant is a popular indoor plant with upright leaves. It is also known as Mother-in-Law's Tongue. It is one of the best air-purifying plants. Snake Plant thrives in low light and neglect. It requires minimal watering. It symbolizes resilience and positivity. Snake Plant removes toxins from indoor air. It can survive in various climates. It grows slowly but steadily. Snake Plant is safe for offices and homes.",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/54fbb611e4b0d7c1e151d22a/1610074066643-OP8HDJUWUH8T5MHN879K/Snake+Plant.jpg?format=1000w"
+  },
+  {
+    "id": 14,
+    "name": "Pothos",
+    "category": "Indoor Plant",
+    "description": "Pothos is a popular vining plant. It is also called Money Plant or Devil's Ivy. Pothos is easy to grow indoors. It thrives in low to bright light. It requires occasional watering. Pothos symbolizes prosperity and wealth. It can grow in soil or water. The plant purifies indoor air. It is propagated by stem cuttings. Pothos is widely used in home décor.",
+    "image_url": "images/pothos.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Money Plant",
+    "category": "Indoor Plant",
+    "description": "Money Plant is believed to bring luck and prosperity. It has shiny heart-shaped leaves. It grows well indoors in pots. Money Plant can grow in soil or water. It requires minimal care and indirect light. It is propagated from stem cuttings. Money Plant improves indoor air quality. It is commonly gifted for good fortune. The plant grows as a vine or creeper. It is easy to maintain at home or office.",
+    "image_url": "https://plantsguru.com/cdn/shop/files/Money_Plant_Green_-_Good_Luck_Plant.jpg?v=1744915169&width=1500"
+  },
+  {
+    "id": 16,
+    "name": "Tulsi",
+    "category": "Medicinal Plant",
+    "description": "Tulsi is a sacred plant in India. It is also known as Holy Basil. Tulsi is used in Ayurveda for medicine. It symbolizes purity and protection. Tulsi leaves are used in teas and remedies. It requires full sunlight to grow. Tulsi is believed to ward off negative energy. It is worshipped in many households. The plant improves immunity and health. Tulsi is propagated from seeds easily.",
+    "image_url": "https://m.media-amazon.com/images/I/61vhxSNCOzL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Cactus",
+    "category": "Succulent",
+    "description": "Cactus is a desert plant adapted to dry climates. It stores water in its thick stems. Cactus symbolizes endurance and strength. It comes in many shapes and sizes. Some cactus species bloom with beautiful flowers. Cactus requires sandy well-drained soil. It needs minimal water. It grows best in direct sunlight. Cactus is easy to maintain indoors. It is popular as a decorative plant.",
+    "image_url": "https://m.media-amazon.com/images/I/61AXgqqMNbL.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Bamboo",
+    "category": "Ornamental Plant",
+    "description": "Bamboo is a fast-growing grass. It is considered a symbol of luck and prosperity. Bamboo is used in construction and crafts. It grows well in water and soil. Bamboo requires indirect light and water. It is easy to grow indoors. Lucky Bamboo is a popular variety. It purifies indoor air. Bamboo has cultural importance in Asia. It is propagated from cuttings.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNkWoyU1QcI8miQHRt5p1f9TP7GutlsIQnqg&s"
+  },
+  {
+    "id": 19,
+    "name": "Fern",
+    "category": "Indoor Plant",
+    "description": "Ferns are leafy green indoor plants. They symbolize sincerity and magic. Ferns require humidity and shade. They need regular watering. Ferns grow well in pots or hanging baskets. They purify indoor air naturally. Ferns reproduce using spores instead of seeds. They have delicate feathery leaves. Ferns add greenery to homes and offices. They are easy to grow indoors.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZygJsZd5cYCT3K-wXfea2uw7R05iZKN8X1Q&s"
+  },
+  {
+    "id": 20,
+    "name": "Peony",
+    "category": "Flower",
+    "description": "Peony is a fragrant flowering plant. It has large colorful blooms. Peonies symbolize prosperity and romance. They are popular in weddings and bouquets. Peonies bloom in late spring. They require well-drained soil. The flowers come in pink, red, white, and yellow. Peonies attract pollinators like bees. They are perennials that live for decades. Peonies need cold winters for growth.",
+    "image_url": "images/peony.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Spider Plant",
+    "category": "Indoor Plant",
+    "description": "Spider Plant is known for its arching leaves and air-purifying qualities. It's incredibly easy to grow and propagate from its 'spiderettes' or baby plants. It prefers bright, indirect light and tolerates a range of conditions, making it perfect for beginners. It helps remove formaldehyde and xylene from the air.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hierbabuena_0611_Revised.jpg/1200px-Hierbabuena_0611_Revised.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Peace Lily",
+    "category": "Indoor Plant",
+    "description": "The Peace Lily is an elegant plant with dark green leaves and beautiful white flowers called spathes. It thrives in shade and is known for its air-purifying abilities. It's a great communicator, as its leaves droop noticeably when it needs water. This plant symbolizes peace, purity, and tranquility.",
+    "image_url": "https://m.media-amazon.com/images/I/518WgiCU3FL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 23,
+    "name": "ZZ Plant",
+    "category": "Indoor Plant",
+    "description": "The ZZ Plant (Zamioculcas zamiifolia) is a nearly indestructible houseplant. It has wide, dark green, glossy leaves and is extremely drought-tolerant. It thrives on neglect and can survive in very low light conditions, making it ideal for offices and rooms with little sunlight. All parts of the plant are toxic if ingested.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Zamioculcas_zamiifolia_1.jpg/960px-Zamioculcas_zamiifolia_1.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Rubber Plant",
+    "category": "Indoor Plant",
+    "description": "The Rubber Plant (Ficus elastica) is a popular houseplant with large, leathery, dark green leaves. It is relatively easy to care for and prefers bright, indirect light. It can grow into a tall, tree-like plant indoors. It is excellent at removing airborne toxins and adds a bold statement to any room.",
+    "image_url": "images/rubber_plant.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Mint",
+    "category": "Herb",
+    "description": "Mint is a fast-growing, aromatic herb. It is widely used in culinary dishes, teas, and drinks like mojitos. Mint is known for its refreshing flavor and soothing properties. It grows vigorously and can be invasive in gardens, so it's often grown in containers. It prefers rich, moist soil and partial shade.",
+    "image_url": "https://cdn.britannica.com/46/139046-050-68C68E11/Peppermint.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Rosemary",
+    "category": "Herb",
+    "description": "Rosemary is a fragrant, woody herb with needle-like leaves. It is native to the Mediterranean region and is widely used in cooking to flavor meats, soups, and bread. It prefers full sun and well-drained, sandy soil. Rosemary is associated with memory and remembrance. It can be grown as a perennial shrub.",
+    "image_url": "images/rosemary.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Basil",
+    "category": "Herb",
+    "description": "Basil is a popular culinary herb known for its sweet, aromatic leaves. It is a key ingredient in Italian cuisine, especially in pesto and pasta sauces. Basil loves warm weather and full sun. It requires well-drained soil and regular watering. There are many varieties, including sweet basil, Thai basil, and lemon basil.",
+    "image_url": "images/basil.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Petunia",
+    "category": "Flower",
+    "description": "Petunias are popular annual flowers known for their wide variety of colors and trumpet-shaped blooms. They are easy to grow and flower profusely throughout the summer. Petunias are perfect for garden beds, borders, and hanging baskets. They require full sunlight and well-drained soil.",
+    "image_url": "https://cdn.mos.cms.futurecdn.net/ApwpUjUhTs8hpTpvTgLD9a.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Geranium",
+    "category": "Flower",
+    "description": "Geraniums are versatile and vibrant flowers, popular for their long-lasting blooms and attractive foliage. They thrive in sunny locations and are often grown in containers, window boxes, and garden beds. They are drought-tolerant and come in a range of colors, including red, pink, white, and purple.",
+    "image_url": "images/geranium.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Hydrangea",
+    "category": "Shrub",
+    "description": "Hydrangeas are deciduous shrubs known for their large, stunning flower heads. The color of the flowers can change based on the soil's pH level—blue in acidic soil and pink in alkaline soil. They prefer partial shade and moist, well-drained soil. Hydrangeas symbolize gratitude and heartfelt emotion.",
+    "image_url": "https://www.thespruce.com/thmb/J7t7yf_Bt6_9wRx7HLOPzEvaI_I=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/growing-hydrangeas-1402684-01-d22f3e7d2e594e3b9731a2c33e70e328_1-d5da2ecbeb254d98ba7d876845eb95ac.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Fiddle Leaf Fig",
+    "category": "Indoor Plant",
+    "description": "The Fiddle Leaf Fig is a trendy indoor tree featuring very large, heavily veined, and glossy violin-shaped leaves. It makes a dramatic statement in any room. It requires bright, filtered light and consistent watering. It can be sensitive to changes in its environment and drafts.",
+    "image_url": "images/fiddle_leaf_fig.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Monstera Deliciosa",
+    "category": "Indoor Plant",
+    "description": "Monstera Deliciosa, also known as the Swiss Cheese Plant, is famous for its large, tropical leaves with natural splits or holes. It's a vining plant that loves to climb. It prefers bright, indirect light and high humidity. It's a popular choice for adding a lush, jungle-like feel to a home.",
+    "image_url": "images/monstera_deliciosa.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Echeveria",
+    "category": "Succulent",
+    "description": "Echeveria is a genus of succulents known for its beautiful rosette shapes and diverse colors. They are low-maintenance and drought-tolerant, storing water in their fleshy leaves. They require plenty of sunlight and well-draining soil. Echeverias are popular in succulent arrangements and rock gardens.",
+    "image_url": "images/echeveria.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Daffodil",
+    "category": "Flower",
+    "description": "Daffodils are cheerful, trumpet-shaped flowers that are one of the first signs of spring. They grow from bulbs and are known for their bright yellow and white blooms. Daffodils symbolize rebirth and new beginnings. They are hardy and easy to grow, returning year after year.",
+    "image_url": "images/daffodil.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Chrysanthemum",
+    "category": "Flower",
+    "description": "Chrysanthemums, often called 'mums', are classic autumn flowers. They come in a vast range of shapes, sizes, and colors, including yellow, white, pink, and red. They symbolize joy and optimism. Mums require full sun and well-drained soil. They are widely used in floral arrangements and gardens.",
+    "image_url": "images/chrysanthemum.jpg"
+  },
+  {
+    "id": 36,
+    "name": "English Ivy",
+    "category": "Vine",
+    "description": "English Ivy is a vigorous, fast-growing evergreen vine. It is often used as a ground cover or to climb walls and trellises. It's also a popular indoor plant for hanging baskets. It prefers shady locations and is very hardy. Ivy is an excellent air purifier but can be invasive outdoors.",
+    "image_url": "images/english_ivy.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Tomato",
+    "category": "Vegetable",
+    "description": "The tomato is a widely cultivated fruit, commonly treated as a vegetable in cooking. It is a key ingredient in cuisines around the world. Tomato plants are vines that require full sun and rich, well-drained soil. There are thousands of varieties, from small cherry tomatoes to large beefsteak types.",
+    "image_url": "images/tomato.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Lettuce",
+    "category": "Vegetable",
+    "description": "Lettuce is a leafy green vegetable that is a staple in salads and sandwiches. It's a cool-season crop that grows relatively quickly. There are many types of lettuce, including iceberg, romaine, and butterhead. It is rich in vitamins K and A and requires consistent moisture to prevent bitterness.",
+    "image_url": "images/lettuce.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Strawberry",
+    "category": "Fruit",
+    "description": "Strawberries are sweet, red fruits loved for their distinct aroma and juicy texture. They are grown worldwide and are a popular ingredient in desserts, jams, and juices. The plants are low-growing and produce runners to spread. They require full sun and well-drained, sandy soil.",
+    "image_url": "images/strawberry.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Lemon Tree",
+    "category": "Fruit Tree",
+    "description": "The lemon tree is a small evergreen tree that produces the sour, yellow citrus fruit. It has fragrant white flowers and glossy green leaves. Lemon trees require a warm climate and plenty of sun. Dwarf varieties can be grown in containers, making them popular as indoor or patio plants.",
+    "image_url": "images/lemon_tree.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Begonia",
+    "category": "Flower",
+    "description": "Begonias are prized for both their colorful flowers and their decorative leaves. They are versatile plants that can be grown indoors or outdoors in shady spots. Begonias thrive in moist, well-drained soil and high humidity. There are over 1,800 different species of begonia.",
+    "image_url": "images/begonia.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Zinnia",
+    "category": "Flower",
+    "description": "Zinnias are cheerful, easy-to-grow annual flowers that bloom from summer until the first frost. They come in a rainbow of colors and attract butterflies and other pollinators. Zinnias love full sun and are great for beginners. They make excellent cut flowers for bouquets.",
+    "image_url": "images/zinnia.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Parsley",
+    "category": "Herb",
+    "description": "Parsley is a bright green, biennial herb commonly used as a garnish and flavoring in cooking. There are two main types: curly-leaf and flat-leaf (Italian). It is rich in vitamins C, K, and A. Parsley prefers full sun to partial shade and moist, well-drained soil.",
+    "image_url": "images/parsley.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Thyme",
+    "category": "Herb",
+    "description": "Thyme is a low-growing, aromatic herb with small leaves. It is a staple in Mediterranean cuisine and is known for its earthy, slightly minty flavor. Thyme is a perennial that thrives in full sun and well-drained soil. It is drought-tolerant and often used as a ground cover.",
+    "image_url": "images/thyme.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Oregano",
+    "category": "Herb",
+    "description": "Oregano is a popular culinary herb with a pungent, peppery flavor, essential in Italian, Greek, and Mexican cooking. It is a hardy perennial that grows well in warm, sunny locations with well-drained soil. Oregano is closely related to marjoram and is also known for its medicinal properties.",
+    "image_url": "images/oregano.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Dahlia",
+    "category": "Flower",
+    "description": "Dahlias are tuberous plants known for their incredibly diverse and showy flowers, which bloom from mid-summer to autumn. They come in almost every color and a wide range of sizes, from small pompons to large 'dinner-plate' blooms. They require full sun and need to be dug up and stored in winter in cold climates.",
+    "image_url": "images/dahlia.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Carnation",
+    "category": "Flower",
+    "description": "Carnations are popular flowers with frilly petals and a long vase life. They come in a wide array of colors, and each color carries a different meaning, such as love, fascination, and distinction. They are perennials that prefer full sun and well-drained, slightly alkaline soil.",
+    "image_url": "images/carnation.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Iris",
+    "category": "Flower",
+    "description": "The Iris is a genus of flowering plants with showy, intricate flowers. It is named after the Greek goddess of the rainbow. Irises grow from rhizomes or bulbs and come in many colors. They symbolize faith, hope, and wisdom. They require full sun and well-drained soil.",
+    "image_url": "images/iris.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Gladiolus",
+    "category": "Flower",
+    "description": "Gladiolus are known for their tall flower spikes with large, colorful blossoms. They grow from corms and bloom in mid-summer. They are popular as cut flowers and add vertical interest to gardens. Gladiolus prefer full sun and well-drained soil. They symbolize strength of character and integrity.",
+    "image_url": "images/gladiolus.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Anthurium",
+    "category": "Indoor Plant",
+    "description": "Anthuriums are tropical plants famous for their bright, heart-shaped 'flowers', which are actually colorful spathes. They have glossy, dark green leaves and can bloom year-round in the right conditions. They prefer bright, indirect light, high humidity, and consistent moisture.",
+    "image_url": "images/anthurium.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Calathea",
+    "category": "Indoor Plant",
+    "description": "Calathea, also known as the prayer plant, is prized for its stunningly patterned leaves. The leaves often have intricate designs in shades of green, purple, and cream. They characteristically fold up at night. Calatheas require high humidity and indirect light, making them challenging but rewarding.",
+    "image_url": "images/calathea.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Bird of Paradise",
+    "category": "Indoor Plant",
+    "description": "The Bird of Paradise plant is a large, tropical plant with banana-like leaves. It is named for its unique flower, which resembles a brightly colored bird in flight. It needs bright light, including some direct sun, to thrive and bloom. It adds a dramatic and exotic touch to any space.",
+    "image_url": "images/bird_of_paradise.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Azalea",
+    "category": "Shrub",
+    "description": "Azaleas are flowering shrubs known for their vibrant and profuse spring blooms. They come in a wide range of colors, including pink, purple, red, and white. Azaleas are part of the Rhododendron genus and prefer acidic, well-drained soil and partial shade.",
+    "image_url": "images/azalea.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Boxwood",
+    "category": "Shrub",
+    "description": "Boxwood is a popular evergreen shrub used for hedges, borders, and topiary. It has small, dense, green leaves and can be easily pruned into formal shapes. It is a slow-growing plant that is deer-resistant and tolerant of a range of soil types and light conditions.",
+    "image_url": "images/boxwood.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Japanese Maple",
+    "category": "Tree",
+    "description": "Japanese Maples are small, deciduous trees prized for their graceful form and stunning foliage. Their leaves come in various shapes and colors, including shades of red, purple, green, and gold, which often become more brilliant in the fall. They are popular as specimen trees in landscaping.",
+    "image_url": "images/japanese_maple.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Dracaena",
+    "category": "Indoor Plant",
+    "description": "Dracaena is a large group of popular houseplants known for their striking, strap-like leaves, which often feature variegation. They are relatively easy to care for, tolerate low light, and are excellent air purifiers. Common varieties include the Dragon Tree and Corn Plant.",
+    "image_url": "images/dracaena.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Ficus Tree",
+    "category": "Indoor Plant",
+    "description": "The Ficus Tree, or Weeping Fig, is a popular indoor tree with a slender trunk and graceful, arching branches of glossy green leaves. It prefers bright, indirect light and consistent conditions. It can be sensitive to being moved and may drop its leaves in protest.",
+    "image_url": "images/ficus_tree.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Cilantro",
+    "category": "Herb",
+    "description": "Cilantro is an herb with bright, citrusy leaves used extensively in Mexican, Middle Eastern, and Asian cuisines. The entire plant is edible, with its seeds being known as coriander. It is a fast-growing, cool-season annual that can bolt (flower quickly) in hot weather.",
+    "image_url": "images/cilantro.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Dill",
+    "category": "Herb",
+    "description": "Dill is an aromatic herb with feathery, delicate leaves and a distinctive tangy flavor. Both its leaves (dill weed) and seeds are used in cooking, particularly for pickling and flavoring fish and soups. It is an annual plant that attracts beneficial insects to the garden.",
+    "image_url": "images/dill.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Sage",
+    "category": "Herb",
+    "description": "Sage is a perennial herb with soft, grayish-green leaves and a savory, peppery flavor. It is commonly used in cooking to flavor poultry, sausages, and stuffings. Sage has a long history of medicinal use and is associated with wisdom. It prefers full sun and well-drained soil.",
+    "image_url": "images/sage.jpg"
+  },
+  {
+    "id": 61,
+    "name": "Pansy",
+    "category": "Flower",
+    "description": "Pansies are cheerful, cool-weather flowers with heart-shaped, overlapping petals. They are known for their colorful 'faces' and come in a vast array of colors and patterns. Pansies are perfect for spring and fall gardens, adding a splash of color to containers and borders when little else is blooming.",
+    "image_url": "images/pansy.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Snapdragon",
+    "category": "Flower",
+    "description": "Snapdragons are classic garden flowers with unique, dragon-shaped blooms that can be 'snapped' open and shut by squeezing the sides. They grow on tall spikes and come in a wide range of colors. They are cool-season annuals and make excellent cut flowers.",
+    "image_url": "images/snapdragon.jpg"
+  },
+  {
+    "id": 63,
+    "name": "Hyacinth",
+    "category": "Flower",
+    "description": "Hyacinths are highly fragrant spring-blooming bulbs. They produce dense clusters of star-shaped flowers on a single stalk. They come in various colors, including purple, pink, white, and blue. Hyacinths are perfect for gardens, borders, and forcing indoors for winter fragrance.",
+    "image_url": "images/hyacinth.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Crocus",
+    "category": "Flower",
+    "description": "Crocuses are small, early-blooming flowers that often push through the snow, signaling the end of winter. They grow from corms and come in shades of purple, yellow, and white. They are easy to grow and are ideal for naturalizing in lawns, rock gardens, and under trees.",
+    "image_url": "images/crocus.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Sedum",
+    "category": "Succulent",
+    "description": "Sedum, also known as Stonecrop, is a large genus of succulents with fleshy leaves, stems, and roots. They are extremely drought-tolerant and come in a variety of forms, from low-growing ground covers to upright varieties. They are popular in rock gardens and for green roofs.",
+    "image_url": "images/sedum.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Haworthia",
+    "category": "Succulent",
+    "description": "Haworthia is a genus of small succulents, often resembling miniature aloes. They typically have rosette-shaped leaves with interesting patterns, stripes, or translucent 'windows'. They are great houseplants as they tolerate lower light conditions better than many other succulents.",
+    "image_url": "images/haworthia.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Christmas Cactus",
+    "category": "Succulent",
+    "description": "The Christmas Cactus is a popular houseplant known for its colorful, tubular flowers that bloom around the holiday season. Unlike desert cacti, it is native to tropical rainforests and requires more frequent watering and indirect light. Its stems are composed of flattened segments joined together.",
+    "image_url": "images/christmas_cactus.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Clematis",
+    "category": "Vine",
+    "description": "Clematis is a popular flowering vine, often called the 'Queen of Climbers'. It is known for its large, spectacular flowers that come in a wide range of colors and shapes. Clematis vines need support to climb and famously prefer 'sunny heads and shady feet' (sun on their leaves, shade on their roots).",
+    "image_url": "images/clematis.jpg"
+  },
+  {
+    "id": 69,
+    "name": "Pampas Grass",
+    "category": "Ornamental Grass",
+    "description": "Pampas Grass is a large, dramatic ornamental grass known for its tall, feathery plumes that appear in late summer. The plumes, typically white or pinkish, are popular in dried floral arrangements. It is a fast-growing and drought-tolerant plant that makes a bold statement in the landscape.",
+    "image_url": "images/pampas_grass.jpg"
+  },
+  {
+    "id": 70,
+    "name": "Oak Tree",
+    "category": "Tree",
+    "description": "The Oak Tree is a majestic, long-lived hardwood tree that is a symbol of strength and endurance. It produces acorns, which are an important food source for wildlife. Oaks provide excellent shade and are valuable timber trees. There are hundreds of species of oak found across the Northern Hemisphere.",
+    "image_url": "images/oak_tree.jpg"
+  },
+  {
+    "id": 71,
+    "name": "Pine Tree",
+    "category": "Tree",
+    "description": "Pine trees are evergreen, coniferous trees known for their needle-like leaves and seed-bearing cones. They are found worldwide and are one of the most commercially important tree species, valued for timber and wood pulp. Pines are also symbols of winter holidays and have a characteristic fresh scent.",
+    "image_url": "images/pine_tree.jpg"
+  },
+  {
+    "id": 72,
+    "name": "Bell Pepper",
+    "category": "Vegetable",
+    "description": "Bell peppers, also known as sweet peppers or capsicum, are fruits that are treated as vegetables in cooking. They are known for their sweet flavor and crisp texture. They come in various colors, such as green, red, yellow, and orange, which indicate their ripeness and nutritional content.",
+    "image_url": "images/bell_pepper.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Cucumber",
+    "category": "Vegetable",
+    "description": "Cucumbers are a widely cultivated vining plant that produces cylindrical fruits used as a culinary vegetable. They have a high water content, making them refreshing. Cucumbers are commonly eaten fresh in salads, pickled, or used in drinks. They grow best in warm weather with full sun.",
+    "image_url": "images/cucumber.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Carrot",
+    "category": "Vegetable",
+    "description": "The carrot is a root vegetable, typically orange in color, though purple, black, red, white, and yellow varieties exist. It is known for being a rich source of beta-carotene, a precursor to vitamin A. Carrots are crunchy, sweet, and are eaten raw or cooked in a variety of dishes.",
+    "image_url": "images/carrot.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Broccoli",
+    "category": "Vegetable",
+    "description": "Broccoli is a green vegetable from the cabbage family, known for its tree-like structure of flowering heads. It is highly nutritious, packed with vitamins C and K, and fiber. Broccoli can be eaten raw or cooked and is a popular ingredient in stir-fries, salads, and side dishes.",
+    "image_url": "images/broccoli.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Spinach",
+    "category": "Vegetable",
+    "description": "Spinach is a leafy green vegetable packed with nutrients and antioxidants, including iron, vitamin C, and vitamin K. It is a versatile vegetable that can be eaten raw in salads, sautéed, or added to soups and smoothies. It grows quickly in cool weather.",
+    "image_url": "images/spinach.jpg"
+  },
+  {
+    "id": 77,
+    "name": "Garlic",
+    "category": "Vegetable",
+    "description": "Garlic is a species in the onion genus, grown for its pungent bulb, which is widely used as a flavoring in cooking. A bulb is divided into cloves, which are used for both culinary and medicinal purposes. It is known for its distinct aroma and potential health benefits.",
+    "image_url": "images/garlic.jpg"
+  },
+  {
+    "id": 78,
+    "name": "Onion",
+    "category": "Vegetable",
+    "description": "The onion is a staple vegetable cultivated and used as a base for countless dishes worldwide. It has a pungent, sharp flavor when raw that mellows and sweetens when cooked. Onions come in various colors, including yellow, red, and white, each with a slightly different flavor profile.",
+    "image_url": "images/onion.jpg"
+  },
+  {
+    "id": 79,
+    "name": "Potato",
+    "category": "Vegetable",
+    "description": "The potato is a starchy tuber that is one of the world's most important food crops. It is incredibly versatile and can be baked, boiled, fried, mashed, or roasted. Potatoes are a good source of vitamins C and B6, and potassium. There are thousands of different potato varieties.",
+    "image_url": "images/potato.jpg"
+  },
+  {
+    "id": 80,
+    "name": "Corn",
+    "category": "Vegetable",
+    "description": "Corn, also known as maize, is a tall grass that produces large grains, or kernels, set in rows on a cob. It is a staple food in many parts of the world and is used to make a wide range of products, including cornmeal, corn syrup, and animal feed. It is typically harvested in late summer.",
+    "image_url": "images/corn.jpg"
+  },
+  {
+    "id": 81,
+    "name": "Apple Tree",
+    "category": "Fruit Tree",
+    "description": "The apple tree is a deciduous tree that produces the widely consumed apple fruit. It is cultivated worldwide and has a deep cultural and mythological significance. There are over 7,500 known cultivars of apples, resulting in a wide range of desired characteristics.",
+    "image_url": "images/apple_tree.jpg"
+  },
+  {
+    "id": 82,
+    "name": "Orange Tree",
+    "category": "Fruit Tree",
+    "description": "The orange tree is a citrus evergreen tree known for producing the sweet orange fruit. It thrives in subtropical climates and has fragrant white blossoms. Oranges are a major commercial fruit, valued for their juice and high vitamin C content.",
+    "image_url": "images/orange_tree.jpg"
+  },
+  {
+    "id": 83,
+    "name": "Grape Vine",
+    "category": "Vine",
+    "description": "The grapevine is a woody vine that produces grapes, which can be eaten fresh, dried to make raisins, or fermented to produce wine. Grapes grow in clusters and have been cultivated for thousands of years. They require a long growing season with plenty of sun.",
+    "image_url": "images/grape_vine.jpg"
+  },
+  {
+    "id": 84,
+    "name": "Watermelon",
+    "category": "Fruit",
+    "description": "Watermelon is a large, vining fruit known for its high water content and sweet, refreshing flesh, which is typically red. It is a popular summer fruit. Watermelons grow on the ground and require a long, warm growing season to mature.",
+    "image_url": "images/watermelon.jpg"
+  },
+  {
+    "id": 85,
+    "name": "Cherry Blossom",
+    "category": "Tree",
+    "description": "The Cherry Blossom, or Sakura, is the flower of several trees of genus Prunus. It is famous for its beautiful, ephemeral pink and white blooms in the spring. Cherry blossoms hold a significant cultural importance in Japan, symbolizing the transient nature of life.",
+    "image_url": "images/cherry_blossom.jpg"
+  },
+  {
+    "id": 86,
+    "name": "Magnolia",
+    "category": "Tree",
+    "description": "Magnolia is a large genus of flowering trees and shrubs known for their large, fragrant, and beautiful flowers, which are often white, pink, or purple. They are ancient species, with fossils dating back millions of years. Magnolias are popular ornamental trees, symbolizing dignity and nobility.",
+    "image_url": "images/magnolia.jpg"
+  },
+  {
+    "id": 87,
+    "name": "Lilac",
+    "category": "Shrub",
+    "description": "Lilacs are deciduous shrubs beloved for their intensely fragrant and beautiful clusters of flowers that bloom in late spring. The most common color is lilac, a pale purple, but they also come in white, pink, and blue. Lilacs symbolize first love and are a classic cottage garden plant.",
+    "image_url": "images/lilac.jpg"
+  },
+  {
+    "id": 88,
+    "name": "Forsythia",
+    "category": "Shrub",
+    "description": "Forsythia is a fast-growing deciduous shrub that is one of the first plants to bloom in spring. It is known for its profusion of bright yellow flowers that appear on bare branches before the leaves emerge. Forsythia is a symbol of anticipation and the arrival of spring.",
+    "image_url": "images/forsythia.jpg"
+  },
+  {
+    "id": 89,
+    "name": "Wisteria",
+    "category": "Vine",
+    "description": "Wisteria is a powerful, fast-growing climbing vine known for its spectacular cascades of fragrant, pea-like flowers, typically in shades of purple, blue, or white, that hang down in long clusters. It requires a very sturdy support structure to grow on. Wisteria symbolizes love and welcome.",
+    "image_url": "images/wisteria.jpg"
+  },
+  {
+    "id": 90,
+    "name": "Bougainvillea",
+    "category": "Vine",
+    "description": "Bougainvillea is a tropical, thorny vine known for its incredibly vibrant and colorful flower-like bracts that surround its actual small, white flowers. It comes in shades of pink, magenta, purple, red, and orange. It thrives in warm, sunny, and dry climates.",
+    "image_url": "images/bougainvillea.jpg"
+  },
+  {
+    "id": 91,
+    "name": "Ginkgo Biloba",
+    "category": "Tree",
+    "description": "Ginkgo Biloba, also known as the maidenhair tree, is a unique tree with no close living relatives. It is a living fossil, with a history dating back 270 million years. It is known for its distinctive fan-shaped leaves that turn a brilliant yellow in the fall. It is also used in herbal medicine.",
+    "image_url": "images/ginkgo_biloba.jpg"
+  },
+  {
+    "id": 92,
+    "name": "Redwood",
+    "category": "Tree",
+    "description": "Redwoods are the tallest trees on Earth, a species of evergreen tree native to the coastal regions of California. They are known for their immense height, massive trunks, and long lifespan. Redwood forests are awe-inspiring ecosystems that are protected in national and state parks.",
+    "image_url": "images/redwood.jpg"
+  },
+  {
+    "id": 93,
+    "name": "Asparagus",
+    "category": "Vegetable",
+    "description": "Asparagus is a perennial vegetable known for its tender, edible spears that are harvested in the spring. It is a nutritious vegetable, high in folic acid and vitamins. Once established, an asparagus bed can produce spears for 20 years or more.",
+    "image_url": "images/asparagus.jpg"
+  },
+  {
+    "id": 94,
+    "name": "Pumpkin",
+    "category": "Vegetable",
+    "description": "Pumpkin is a type of squash, known for its large, round, orange fruit. It is a symbol of autumn and is famously carved for Halloween and used in pies for Thanksgiving. Pumpkins are nutritious, and their seeds are also edible and healthy.",
+    "image_url": "images/pumpkin.jpg"
+  },
+  {
+    "id": 95,
+    "name": "Zucchini",
+    "category": "Vegetable",
+    "description": "Zucchini, also known as courgette, is a summer squash that grows on a vining plant. It is highly productive and has a mild flavor, making it very versatile in cooking. It can be grilled, sautéed, baked into bread, or spiralized into 'zoodles'.",
+    "image_url": "images/zucchini.jpg"
+  },
+  {
+    "id": 96,
+    "name": "Eggplant",
+    "category": "Vegetable",
+    "description": "Eggplant, or aubergine, is a species of nightshade grown for its edible fruit. It is most commonly deep purple with a glossy skin. It has a spongy, absorbent flesh and is a key ingredient in dishes like Moussaka and Ratatouille.",
+    "image_url": "images/eggplant.jpg"
+  },
+  {
+    "id": 97,
+    "name": "Radish",
+    "category": "Vegetable",
+    "description": "Radishes are a fast-growing root vegetable with a peppery flavor and crisp texture. They come in various shapes and colors, with the small, round red radish being the most common. They are typically eaten raw in salads and are one of the quickest crops to grow from seed.",
+    "image_url": "images/radish.jpg"
+  },
+  {
+    "id": 98,
+    "name": "Pea",
+    "category": "Vegetable",
+    "description": "Peas are small, spherical seeds from the pod of the pea plant. They are a cool-season crop and are known for their sweet flavor. Peas are a good source of protein and fiber. They are commonly sold fresh, frozen, or canned.",
+    "image_url": "images/pea.jpg"
+  },
+  {
+    "id": 99,
+    "name": "Bean",
+    "category": "Vegetable",
+    "description": "Beans are a highly versatile and nutritious legume. They grow in pods and come in many varieties, such as green beans, black beans, and kidney beans. They are an excellent source of plant-based protein, fiber, and iron. Beans are a staple food in many cultures around the world.",
+    "image_url": "images/bean.jpg"
+  },
+  {
+    "id": 100,
+    "name": "Wheat",
+    "category": "Grain",
+    "description": "Wheat is a cereal grain that is a staple food worldwide. It is the leading source of vegetable protein in human food. Wheat is ground into flour, which is a primary ingredient in baked goods like bread, pasta, and pastries. It is one of the most widely cultivated crops globally.",
+    "image_url": "images/wheat.jpg"
+  }
+]

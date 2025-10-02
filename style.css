@@ -419,66 +419,68 @@ body {
 }   
 
 /* --- MODAL STYLES --- */
+
+/* The modal background (hidden by default) */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top of everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
 }
 
-.modal.show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-}
-
+/* The modal pop-up box */
 .modal-content {
     background-color: #fefefe;
+    margin: auto;
     padding: 30px;
+    border: 1px solid #888;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px; /* Max width for the modal */
     border-radius: 10px;
     position: relative;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    transform: translateY(-20px);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.modal.show .modal-content {
-    transform: translateY(0);
+/* The Close Button (×) */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.modal-content h2 {
-    font-family: 'Merriweather', serif;
-    color: #2e7d32;
-    margin: 0 0 20px 0;
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling for the details inside the modal */
+.modal-details {
+    margin-top: 15px;
 }
 
 .modal-details p {
     display: flex;
     align-items: center;
+    gap: 10px; /* Space between icon and text */
     margin-bottom: 12px;
+    font-size: 1rem;
 }
 
 .modal-details i {
-    color: #4CAF50;
-    margin-right: 15px;
-    width: 20px;
-    text-align: center;
-}
-
-.close-button {
-    color: #aaa;
-    position: absolute;
-    top: 10px; right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
+    color: #4CAF50; /* Green icons */
+    font-size: 1.2rem;
 }
 
 /* Center container */
@@ -563,4 +565,31 @@ body {
 
 .footer-contact .contact-item span {
     flex: 1; /* Allow the text to take up the remaining space */
+}
+/* style.css */
+
+/* --- BOTTOM CALL TO ACTION SECTION --- */
+.cta-bottom-section {
+    background-color: #f0f7f1; /* A very light, soft green background */
+    text-align: center;      /* Center all the text and buttons */
+    padding: 60px 20px;      /* Add generous spacing top/bottom and sides */
+    margin: 40px 0;          /* Add margin to separate from other content */
+}
+
+.cta-bottom-section h2 {
+    font-size: 2.2rem;       /* Make the title larger */
+    color: #2e7d32;          /* Dark green color for the title */
+    margin-bottom: 15px;
+}
+
+.cta-bottom-section p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;        /* Keep the paragraph from getting too wide */
+    margin: 0 auto 30px auto; /* Center the paragraph and add space below it */
+}
+
+/* Adds a bit of margin between the buttons */
+.cta-buttons .btn {
+    margin: 5px;
 }

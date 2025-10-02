@@ -324,11 +324,15 @@
         
 
         <section class="cta-bottom-section">
-            <div class="cta-buttons">
-                <a class="btn btn-primary" href="exploreplant.html">Explore plants</a>
-                <a class="btn btn-secondary" href="careguide.html">Plant care guide</a>
-            </div>
-        </section>
+    <div class="cta-content">
+        <h2>Ready to Start Your Plant Journey?</h2>
+        <p>Explore our extensive library or get expert care tips to help your plants thrive.</p>
+        <div class="cta-buttons">
+            <a class="btn btn-primary" href="exploreplant.html">Explore Plants</a>
+            <a class="btn btn-secondary" href="careguide.html">Plant Care Guide</a>
+        </div>
+    </div>
+</section>
     </main>
 
    <div class="faq-container">
@@ -499,6 +503,58 @@ function showPlantDetails(plant) {
   plantDetails.style.display = "block";
 }
 </script>
+ <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Select all "Learn More" buttons and all modals
+            const learnMoreButtons = document.querySelectorAll('.btn-learn-more');
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.close-button');
+
+            // Function to open a modal
+            const openModal = (modalId) => {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'flex'; // Use 'flex' to help with centering
+                }
+            };
+
+            // Function to close a modal
+            const closeModal = (modal) => {
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            };
+
+            // Add a click event to each "Learn More" button
+            learnMoreButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const plantName = button.dataset.plant; // Gets the data-plant attribute (e.g., "monstera")
+                    const modalId = plantName + '-modal'; // Creates the modal ID (e.g., "monstera-modal")
+                    openModal(modalId);
+                });
+            });
+
+            // Add a click event to each close button (the '×')
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = button.closest('.modal'); // Finds the parent modal
+                    closeModal(modal);
+                });
+            });
+
+            // Add a click event to close the modal by clicking on the background
+            modals.forEach(modal => {
+                modal.addEventListener('click', (event) => {
+                    // If the clicked element is the modal background itself
+                    if (event.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            });
+        });
+    </script>
   </body>
 </html>
 

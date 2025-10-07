@@ -386,67 +386,94 @@
             &copy; 2025 Greenopedia. All rights reserved.
         </div>  
     </footer>
- <script src="plantserver.js"></script>
+ <!-- <script src="plantserver.js"></script> -->
     <script src="script.js"></script>
 <script>
-         document.getElementById("plant-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+    document.getElementById("plant-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    const fileInput = document.getElementById("image");
-    if (!fileInput.files.length) {
-      alert("Please upload an image!");
-      return;
-    }
+        const fileInput = document.getElementById("image");
+        if (!fileInput.files.length) {
+            alert("Please upload an image!");
+            return;
+        }
 
-    const formData = new FormData();
-    formData.append("image", fileInput.files[0]);
+        const formData = new FormData();
+        // CRITICAL: The name 'image' must match upload.single('image') in server.js
+        formData.append("image", fileInput.files[0]);
 
-    const resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = "🔍 Identifying...";
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "🔍 Identifying...";
 
-    try {
-      const res = await fetch("http://localhost:5000/identify", {
-        method: "POST",
-        body: formData,
-      });
+        try {
+            // *** CORRECTED PORT: Using http://localhost:5501 ***
+            const res = await fetch("http://localhost:5501/identify", { 
+                method: "POST",
+                body: formData,
+            });
 
-      const data = await res.json();
-      console.log("API response:", data);
+            // Handle errors thrown by the backend (like 400 or 500)
+            if (!res.ok) {
+                const errorData = await res.json();
+                console.error("Backend Error:", errorData.error);
+                resultDiv.innerHTML = `❌ Identification failed: ${errorData.error || 'Server rejected the request.'}`;
+                return;
+            }
 
-      // ✅ Adapted for Plant.id v3 structure
-      const suggestions = data.result?.classification?.suggestions || [];
+            const data = await res.json();
+            console.log("API response:", data);
 
-      if (suggestions.length > 0) {
-        resultDiv.innerHTML = suggestions
-          .map(
-            (plant) => `
-            <div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:10px;">
-              <h2>${plant.name} (${(plant.probability * 100).toFixed(1)}%)</h2>
-              <p><b>Common names:</b> ${plant.details?.common_names?.join(", ") || "N/A"}</p>
-              <p><b>Description:</b> ${plant.details?.wiki_description?.value || "No description"}</p>
-              <a href="${plant.details?.url}" target="_blank">🔗 More Info</a>
-              <div>
-                ${
-                  plant.similar_images?.length
-                    ? `<img src="${plant.similar_images[0].url_small}" alt="Similar plant" style="max-width:200px; margin-top:10px;" />`
-                    : ""
-                }
-              </div>
-            </div>
-          `
-          )
-          .join("");
-      } else {
-        resultDiv.innerHTML = "❌ No plant identified.";
-      }
-    } catch (err) {
-      console.error(err);
-      resultDiv.innerHTML = "⚠️ Error identifying plant.";
- 
-    }
-  });
-     
-    </script>
+            // Adapted for Plant.id v3 structure
+            const suggestions = data.result?.classification?.suggestions || [];
+
+            if (suggestions.length > 0) {
+                resultDiv.innerHTML = suggestions
+                    .map(
+                        (plant) => `
+                        <div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:10px;">
+                            <h2>${plant.name} (${(plant.probability * 100).toFixed(1)}%)</h2>
+                            <p><b>Common names:</b> ${plant.details?.common_names?.join(", ") || "N/A"}</p>
+                            <p><b>Description:</b> ${plant.details?.wiki_description?.value || "No description"}</p>
+                            <a href="${plant.details?.url}" target="_blank">🔗 More Info</a>
+                            <div>
+                                ${
+                                    plant.similar_images?.length
+                                        ? `<img src="${plant.similar_images[0].url_small}" alt="Similar plant" style="max-width:200px; margin-top:10px;" />`
+                                        : ""
+                                }
+                            </div>
+                        </div>
+                    `
+                    )
+                    .join("");
+            } else {
+                resultDiv.innerHTML = "❌ No plant identified.";
+            }
+        } catch (err) {
+            console.error("Network/Fetch Error:", err);
+            resultDiv.innerHTML = "⚠️ Error identifying plant (Check server connection).";
+        }
+    });
+</script>
+
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // This port is correct and matches the server.js listener
+        const res = await fetch("http://localhost:5501/api/feedback", { 
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, message }),
+        });
+
+        const data = await res.json();
+        document.getElementById("feedbackStatus").innerText = data.message;
+    });
+</script>
     <script>
   document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
     e.preventDefault();
